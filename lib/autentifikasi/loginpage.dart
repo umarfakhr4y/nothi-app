@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_notihealth/autentifikasi/registrationpage.dart';
 import 'package:flutter_application_notihealth/autentifikasi/signuppage.dart'; // Impor halaman baru
 import 'package:flutter_application_notihealth/forgot%20pw/forgotpasswordpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Loginpage extends StatefulWidget {
-  const Loginpage({ super.key });
+  const Loginpage({super.key});
 
   @override
   State<Loginpage> createState() => _LoginpageState();
@@ -13,7 +14,7 @@ class Loginpage extends StatefulWidget {
 class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
+    return MaterialApp(
       home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -23,7 +24,7 @@ class _LoginpageState extends State<Loginpage> {
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -32,19 +33,26 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-               Image.asset(
-          'assets/images/logo.png',height: 120,
+                Image.asset(
+                  'assets/images/logo.png',
+                  height: 120,
                 ),
                 const SizedBox(height: 20),
                 Text(
                   'Noti-Health',
-                 style: GoogleFonts.inter(fontSize: 36 , color: Color(0xFF5B1616),fontWeight: FontWeight.w200,
+                  style: GoogleFonts.inter(
+                    fontSize: 36,
+                    color: Color(0xFF5B1616),
+                    fontWeight: FontWeight.w200,
                   ),
                 ),
                 const SizedBox(height: 20),
                 Text(
                   'Login',
-                  style: GoogleFonts.inter(fontSize: 28, fontWeight: FontWeight.normal, color: Colors.black,
+                  style: GoogleFonts.inter(
+                    fontSize: 28,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.black,
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -69,7 +77,8 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+                        MaterialPageRoute(
+                            builder: (context) => ForgotPasswordPage()),
                       );
                     },
                     child: const Text('Forgot Password?'),
@@ -77,7 +86,13 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => RegistrationPage()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: Color(0xFF801F1F),
@@ -85,7 +100,8 @@ class LoginPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 170, vertical: 17),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 170, vertical: 17),
                   ),
                   child: Text('Login'),
                 ),
@@ -119,7 +135,8 @@ class LoginPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 125, vertical: 17),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 125, vertical: 17),
                   ),
                   child: const Text(
                     'Sign Up with Google',
@@ -135,7 +152,8 @@ class LoginPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 115, vertical: 17),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 115, vertical: 17),
                   ),
                   child: const Text(
                     'Sign Up with Facebook',
@@ -145,10 +163,11 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignUpPage()),
-                    );
+                    Navigator.of(context).pushAndRemoveUntil(
+                        MaterialPageRoute(
+                          builder: (context) => SignUpPage(),
+                        ),
+                        (Route) => false);
                   },
                   child: Text("Don't have an account? Sign up"),
                 ),

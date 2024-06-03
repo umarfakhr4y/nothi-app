@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_notihealth/autentifikasi/loginpage.dart';
 // import 'package:flutter_application_notihealth/autentifikasi/registrationpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -79,7 +80,7 @@ class SignUpPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 170, vertical: 17),
+                    const EdgeInsets.symmetric(horizontal: 120, vertical: 17),
               ),
               child: const Text('Sign Up'),
             ),
@@ -126,7 +127,13 @@ class SignUpPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => Loginpage(),
+                    ),
+                    (Route) => false);
+              },
               child: const Text(
                 'Already have account? Login',
                 style: TextStyle(color: Colors.black),
