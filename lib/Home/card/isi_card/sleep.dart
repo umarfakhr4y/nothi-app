@@ -377,10 +377,10 @@ class TimePickerWithClockDial extends StatelessWidget {
           size: Size(280, 280), // Assuming the TimePicker has these dimensions
           painter: ClockDialPainter(),
         ),
-        Text(
-          '07:59',
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-        ),
+        // Text(
+        //   '07:59',
+        //   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+        // ),
         // TimePicker
         Container(
           height: 400,
