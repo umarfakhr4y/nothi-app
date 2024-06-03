@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_notihealth/autentifikasi/loginpage.dart';
+import 'package:flutter_application_notihealth/autentifikasi/registrationpage.dart';
 // import 'package:flutter_application_notihealth/autentifikasi/registrationpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -67,10 +68,10 @@ class SignUpPage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => RegistrationPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegistrationPage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
