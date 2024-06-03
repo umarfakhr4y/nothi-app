@@ -154,7 +154,7 @@ class _waterPageState extends State<waterPage> {
                       // Memastikan TextField mengambil ruang yang tersisa
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: ' Insert Water',
+                          hintText: ' Insert Drink',
 
                           filled: true, // Aktifkan fill color
                           fillColor: Colors.white, // Warna background TextField
@@ -215,7 +215,7 @@ class _waterPageState extends State<waterPage> {
                       // Memastikan TextField mengambil ruang yang tersisa
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: ' Insert Water',
+                          hintText: ' Insert Drink',
                           filled: true, // Aktifkan fill color
                           fillColor: Colors.white, // Warna background TextField
                           contentPadding: EdgeInsets.symmetric(vertical: 10),
